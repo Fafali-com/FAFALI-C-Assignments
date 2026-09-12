@@ -1,15 +1,13 @@
-#include <stdio.h>
+// Header file section
 #include <stdlib.h>
 
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
-
+//Main function
 int main(int argc, char *argv[]) {
-	float celsius,fahrenheit;
-	printf("Enter temperature in celsius:");
-	scanf("%f",  &celsius);
-	fahrenheit = (celsius*9.0/5.0+32);
-	printf("%.2f c = %.2f f/n", celsius,fahrenheit);
-	
-	
+	//Output statements
+	printf("Name: Gifty Fafali Akorli\n");
+	printf("Student ID: 01251369B\n");
+	printf("Programme: C Programming Fundamentals\n");
+	printf("Welcome to C Programming\n");
+
 	return 0;
 }

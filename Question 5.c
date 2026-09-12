@@ -1,15 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
 
 int main(int argc, char *argv[]) {
-	float r1,r2,r3,largest;
-	printf("Enter three resistance values:");
-	scanf("%f %f %f", &r1,&r2,&r3);
-	largest=r1;
-	if (r2 > largest)largest=r2;
-	if (r3 > largest)largest=r3;
-	printf("largest resistace = %.2f ohms/n", largest);
+	float num1, num2;
+	
+	//Prompt user for input 
+	printf("Enter first number: ");
+	scanf("%f" , &num1);
+	
+	printf("Enter second number: ");
+	scanf("%f", &num2);
+	
+	//Calculate and display arithmetic operations
+	printf("Addition: %.2f\n", num1 + num2);
+	printf("Substraction: %.2f\n", num1 - num2);
+	printf("Multiplication: %.2f\n", num1*num2);
+	printf("Division: %.2f\n", num1/num2);
+	
 	return 0;
 }

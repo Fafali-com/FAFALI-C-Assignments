@@ -1,14 +1,19 @@
-#include <stdio.h>
-#include <stdlib.h>
 
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+#include <stdio.h>
+
 
 int main(int argc, char *argv[]) {
-float  voltage ,current, Power;
-printf (" Enter voltage(v):");
-scanf("%f", & voltage);
-printf(" Enter current (I):");
-Power = voltage * current;
-	printf ("Power = % .2f Watts/n", Power);
+	//Variable declarations with suitable data types
+	int age = 20;
+	float examScore = 78.50f;
+	float gpa = 3.45f;
+	char grade = 'B';
+	
+	// Displaying values using appropriate format specifiers
+	printf("Age: %d\n", age);
+	printf("Examination Score: %.2f\n", examScore);
+	printf("GPA: %.2f\n", gpa);
+	printf("Grade: %c\n", grade);
+	
 	return 0;
-} 
+}
