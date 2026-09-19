@@ -1,25 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+//Function declaratiom
+void checkEvenOdd(int number);
 
 
-int main(int argc, char *argv[]) {
-	int age;
-	int studentID;
-	float examScore;
+int main() {
+	int num;
 	
-	//Prompt and receieve inputs from the user
-	printf("Enter your age: 21");
-	scanf("%d", &age);
-	
-	printf("Enter your studentID: 1054");
-	scanf("%d", &studentID);
-	
-	printf("Enter your examination score: 76.5");
-	scanf("%f", &examScore);
-	
-	//Display formatted summary output 
-	printf("Age: %d Student ID: %d Score: %.2f\n", age, studentID, examScore);
+	printf("Enter a number: ");
+	scanf("%d", &num);
+	//Call function and pass user input
+	checkEvenOdd(num);
 	
 	return 0;
 }
+	
+	//Function definition
+	void checkEvenOdd(int number) {
+		if (number % 2 == 0){
+			printf("%d is an even munber.\n", number);
+		}else {
+			printf("%d is an odd number. \n", number);
+		}
+	}

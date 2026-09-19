@@ -1,28 +1,29 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void displayGrade(float score) {
+	if (score < 0 || score > 100) {
+		printf("Invalid score! Score must be between 0 and 100.\n");
+	} else if (score >=80) {
+		printf("Grade: A\n");
+	} else if (score >= 70) {
+		printf("Grade: B\n");
+	} else if (score >=60) {
+		printf("Grade: C\n");
+	} else if (score >=50) {
+		printf("Grade: D\n");
+	}else {
+		printf("Grade: F\n");
+	}
+}
 
 
-int main(int argc, char *argv[]) {
-	float voltage, current, time;
-	float power, energy;
+int main() {
+	float score;
+	printf("Enter examination score: ");
+	scanf("%f", &score);
 	
-	//Accept user inputs
-	printf("Enter voltage: ");
-	scanf("%f", &voltage);
+	displayGrade(score);
 	
-	printf("Enter current: "),
-	scanf("%f, &current");
-	
-	printf("Enter time in hours: ");
-	scanf("%f", &time);
-	
-	//Perform calculations
-	power= voltage * current;
-	energy= power* time;
-	
-	//Display formatted results
-	printf("Power: %.2f W\n", power);
-	printf("Energy: %.2f Wh\n", energy);
 	return 0;
 }

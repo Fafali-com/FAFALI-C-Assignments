@@ -1,35 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void multiplicationTable(int number) {
+	for (int i =1; i <=12; i++) {
+		printf("%d * %d = %d\n", number, i, number *i);
+	}
+}
 
 int main() {
-    float score;
-
-    printf("Enter score: ");
-    if (scanf("%f", &score) != 1) {
-        printf("Invalid input\n");
-        return 1;
-    }
-
-    if (score < 0 || score > 100) {
-        printf("Invalid score range\n");
-    } else {
-        char grade;
-        if (score >= 80) {
-            grade = 'A';
-        } else if (score >= 70) {
-            grade = 'B';
-        } else if (score >= 60) {
-            grade = 'C';
-        } else if (score >= 50) {
-            grade = 'D';
-        } else {
-            grade = 'F';
-        }
-
-        printf("Score: %.0f\n", score);
-        printf("Grade: %c\n", grade);
-    }
-
-    return 0;
+	int num;
+	printf("Enter a number: ");
+	scanf("%d", &num);
+	printf("\n");
+	
+	multiplicationTable(num);
+	
+	return 0;
 }

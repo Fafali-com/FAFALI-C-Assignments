@@ -1,19 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int findLargest(int a, int b, int c){
+	if (a >= b &&a >=c) {
+		return a;
+	} else if (b >= a && b >= c){
+		return b;
+	} else {
+		return c;
+	}
+}
 
 int main() {
-    int number;
-
-    printf("Enter number: ");
-    if (scanf("%d", &number) != 1) {
-        printf("Invalid input\n");
-        return 1;
-    }
-
-    for (int i = 1; i <= 12; i++) {
-        printf("%d x %d = %d\n", number, i, number * i);
-    }
-
-    return 0;
+	int a, b, c;
+	
+	printf("Enter first number: ");
+	scanf("%d", &a);
+	printf("Enter second number: ");
+	scanf("%d", &b);
+	printf("Enter third number: ");
+	scanf("%d", &c);
+	
+	int largest = findLargest(a, b, c);
+	printf("\nLargest Number = %d\n", largest);
+	
+	return 0;
 }

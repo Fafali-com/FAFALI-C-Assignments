@@ -1,23 +1,27 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+//Function declaration
+void checkEligibility(int age);
 
 
-int main(int argc, char *argv[]) {
-	float num1, num2;
+int main() {
+	int age;
 	
-	//Prompt user for input 
-	printf("Enter first number: ");
-	scanf("%f" , &num1);
+	printf("Enter your age: ");
+	scanf("%d", &age);
 	
-	printf("Enter second number: ");
-	scanf("%f", &num2);
-	
-	//Calculate and display arithmetic operations
-	printf("Addition: %.2f\n", num1 + num2);
-	printf("Substraction: %.2f\n", num1 - num2);
-	printf("Multiplication: %.2f\n", num1*num2);
-	printf("Division: %.2f\n", num1/num2);
+	//Pass age to funtion
+	checkEligibility(age);
 	
 	return 0;
+}
+
+//Funtion definition
+void checkEligibility(int age){
+	if (age >= 18){
+		printf("You are eligible to vote.\n");
+	}else {
+		printf("You are not eligible to vote.\n");
+	}
 }
